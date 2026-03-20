@@ -1,0 +1,56 @@
+{
+  "balancing_strategy": "Class Weight",
+  "threshold_reference_f1": 0.79,
+  "threshold_reference_r70": 0.05,
+  "resampled": false,
+  "n_samples_before": 149999,
+  "n_samples_after": 149999,
+  "class_distribution_after": {
+    "0": 139973,
+    "1": 10026
+  },
+  "features": [
+    "revolving_utilization",
+    "age",
+    "debt_ratio",
+    "monthly_income",
+    "num_credit_lines",
+    "late_30_59_days",
+    "late_60_89_days",
+    "late_90_plus_days",
+    "num_real_estate_loans",
+    "num_dependents",
+    "log_monthly_income",
+    "log_debt_ratio",
+    "total_late_occurrences",
+    "has_any_late",
+    "max_late_severity",
+    "util_x_late90",
+    "debt_to_income_stress",
+    "income_per_dependent"
+  ],
+  "target": "target_default_2y",
+  "cv_strategy": "StratifiedKFold(n_splits=5)",
+  "random_state": 42,
+  "composite_score_weights": {
+    "AUC-ROC": 0.3,
+    "PR-AUC": 0.25,
+    "F1 (classe 1)": 0.25,
+    "Recall (cl. 1)": 0.2
+  },
+  "strategy_scores": {
+    "Baseline": 0.4438,
+    "Class Weight": 0.5875,
+    "SMOTE": 0.5868,
+    "Undersampling": 0.5867,
+    "SMOTETomek": 0.5865
+  },
+  "proxy_metrics": {
+    "AUC-ROC": 0.8586,
+    "PR-AUC": 0.3771,
+    "F1 (classe 1)": 0.3338,
+    "Recall (cl. 1)": 0.7608,
+    "Precision (cl. 1)": 0.2138,
+    "F1 (classe 0)": 0.8802
+  }
+}
