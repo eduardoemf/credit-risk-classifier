@@ -1,13 +1,17 @@
 {
-  "balancing_strategy": "Class Weight",
+  "balancing_strategy": "SMOTE",
+  "smote_k_neighbors": 5,
   "threshold_reference_f1": 0.79,
   "threshold_reference_r70": 0.05,
-  "resampled": false,
   "n_samples_before": 149999,
-  "n_samples_after": 149999,
-  "class_distribution_after": {
+  "n_samples_after": 279946,
+  "class_distribution_before": {
     "0": 139973,
     "1": 10026
+  },
+  "class_distribution_after": {
+    "1": 139973,
+    "0": 139973
   },
   "features": [
     "revolving_utilization",
@@ -32,25 +36,47 @@
   "target": "target_default_2y",
   "cv_strategy": "StratifiedKFold(n_splits=5)",
   "random_state": 42,
-  "composite_score_weights": {
+  "score_weights": {
     "AUC-ROC": 0.3,
     "PR-AUC": 0.25,
     "F1 (classe 1)": 0.25,
     "Recall (cl. 1)": 0.2
   },
-  "strategy_scores": {
-    "Baseline": 0.4438,
-    "Class Weight": 0.5875,
-    "SMOTE": 0.5868,
-    "Undersampling": 0.5867,
-    "SMOTETomek": 0.5865
-  },
-  "proxy_metrics": {
-    "AUC-ROC": 0.8586,
-    "PR-AUC": 0.3771,
-    "F1 (classe 1)": 0.3338,
-    "Recall (cl. 1)": 0.7608,
-    "Precision (cl. 1)": 0.2138,
-    "F1 (classe 0)": 0.8802
+  "strategy_comparison": {
+    "Baseline": {
+      "AUC-ROC": 0.8579,
+      "PR-AUC": 0.3787,
+      "F1 (classe 1)": 0.2446,
+      "Recall (cl. 1)": 0.1529,
+      "Precision (cl. 1)": 0.611
+    },
+    "Class Weight": {
+      "AUC-ROC": 0.8586,
+      "PR-AUC": 0.3771,
+      "F1 (classe 1)": 0.3338,
+      "Recall (cl. 1)": 0.7608,
+      "Precision (cl. 1)": 0.2138
+    },
+    "SMOTE": {
+      "AUC-ROC": 0.8583,
+      "PR-AUC": 0.3765,
+      "F1 (classe 1)": 0.3324,
+      "Recall (cl. 1)": 0.7603,
+      "Precision (cl. 1)": 0.2127
+    },
+    "Undersampling": {
+      "AUC-ROC": 0.8583,
+      "PR-AUC": 0.3757,
+      "F1 (classe 1)": 0.3332,
+      "Recall (cl. 1)": 0.7601,
+      "Precision (cl. 1)": 0.2134
+    },
+    "SMOTETomek": {
+      "AUC-ROC": 0.8583,
+      "PR-AUC": 0.3766,
+      "F1 (classe 1)": 0.3322,
+      "Recall (cl. 1)": 0.759,
+      "Precision (cl. 1)": 0.2127
+    }
   }
 }
