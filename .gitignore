@@ -211,4 +211,5 @@ __marimo__/
 *.parquet
 *.xls
 *.xlsx
+*.pkl
 teste.txt

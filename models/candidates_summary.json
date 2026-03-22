@@ -1,0 +1,156 @@
+{
+  "flaml_best": {
+    "estimator": "lgbm",
+    "estimator_readable": "LightGBM",
+    "auc_roc": 0.9865,
+    "config": {
+      "n_estimators": 11304,
+      "num_leaves": 4,
+      "min_child_samples": 22,
+      "learning_rate": 0.44497163412328844,
+      "log_max_bin": 8,
+      "colsample_bytree": 0.8332275411263533,
+      "reg_alpha": 0.8288872052649949,
+      "reg_lambda": 0.040645324970506526
+    },
+    "model_path": "../models/candidates/flaml_best.pkl",
+    "cv_metrics": {
+      "AUC-ROC": 0.9868,
+      "PR-AUC": 0.9902,
+      "F1 (classe 1)": 0.9577,
+      "Recall (cl. 1)": 0.9392,
+      "Precision (cl. 1)": 0.9769
+    }
+  },
+  "sklearn_results": {
+    "Logistic Regression": {
+      "metrics": {
+        "AUC-ROC": 0.8606,
+        "PR-AUC": 0.8564,
+        "F1 (classe 1)": 0.7773,
+        "Recall (cl. 1)": 0.7634,
+        "Precision (cl. 1)": 0.7917,
+        "std_AUC-ROC": 0.0012
+      },
+      "best_params": {
+        "solver": "liblinear",
+        "penalty": "l1",
+        "C": 1
+      },
+      "model_path": "../models/candidates/logistic_regression.pkl",
+      "score_composto": 0.8017,
+      "rank": 5
+    },
+    "Decision Tree": {
+      "metrics": {
+        "AUC-ROC": 0.9564,
+        "PR-AUC": 0.9528,
+        "F1 (classe 1)": 0.8914,
+        "Recall (cl. 1)": 0.8883,
+        "Precision (cl. 1)": 0.8946,
+        "std_AUC-ROC": 0.0018
+      },
+      "best_params": {
+        "min_samples_leaf": 20,
+        "max_depth": null,
+        "criterion": "gini",
+        "class_weight": "balanced"
+      },
+      "model_path": "../models/candidates/decision_tree.pkl",
+      "score_composto": 0.9108,
+      "rank": 4
+    },
+    "Random Forest": {
+      "metrics": {
+        "AUC-ROC": 0.9894,
+        "PR-AUC": 0.9889,
+        "F1 (classe 1)": 0.9498,
+        "Recall (cl. 1)": 0.9628,
+        "Precision (cl. 1)": 0.9372,
+        "std_AUC-ROC": 0.0003
+      },
+      "best_params": {
+        "n_estimators": 200,
+        "min_samples_leaf": 1,
+        "max_features": 0.5,
+        "max_depth": null,
+        "class_weight": "balanced"
+      },
+      "model_path": "../models/candidates/random_forest.pkl",
+      "score_composto": 0.9624,
+      "rank": 2
+    },
+    "XGBoost": {
+      "metrics": {
+        "AUC-ROC": 0.9883,
+        "PR-AUC": 0.9906,
+        "F1 (classe 1)": 0.9436,
+        "Recall (cl. 1)": 0.9605,
+        "Precision (cl. 1)": 0.9274,
+        "std_AUC-ROC": 0.0003
+      },
+      "best_params": {
+        "subsample": 0.8,
+        "scale_pos_weight": 5,
+        "n_estimators": 500,
+        "max_depth": 8,
+        "learning_rate": 0.2,
+        "colsample_bytree": 0.6
+      },
+      "model_path": "../models/candidates/xgboost.pkl",
+      "score_composto": 0.958,
+      "rank": 3
+    },
+    "LightGBM": {
+      "metrics": {
+        "AUC-ROC": 0.9896,
+        "PR-AUC": 0.9919,
+        "F1 (classe 1)": 0.9594,
+        "Recall (cl. 1)": 0.9369,
+        "Precision (cl. 1)": 0.9831,
+        "std_AUC-ROC": 0.0003
+      },
+      "best_params": {
+        "subsample": 1.0,
+        "num_leaves": 31,
+        "n_estimators": 500,
+        "max_depth": -1,
+        "learning_rate": 0.1,
+        "class_weight": "balanced"
+      },
+      "model_path": "../models/candidates/lightgbm.pkl",
+      "score_composto": 0.9676,
+      "rank": 1
+    }
+  },
+  "best_candidate": "LightGBM",
+  "features": [
+    "revolving_utilization",
+    "age",
+    "debt_ratio",
+    "monthly_income",
+    "num_credit_lines",
+    "late_30_59_days",
+    "late_60_89_days",
+    "late_90_plus_days",
+    "num_real_estate_loans",
+    "num_dependents",
+    "log_monthly_income",
+    "log_debt_ratio",
+    "total_late_occurrences",
+    "has_any_late",
+    "max_late_severity",
+    "util_x_late90",
+    "debt_to_income_stress",
+    "income_per_dependent"
+  ],
+  "target": "target_default_2y",
+  "score_weights": {
+    "AUC-ROC": 0.3,
+    "F1 (classe 1)": 0.25,
+    "Recall (cl. 1)": 0.25,
+    "Precision (cl. 1)": 0.2
+  },
+  "cv_strategy": "StratifiedKFold(n_splits=5)",
+  "random_state": 42
+}
