@@ -17,7 +17,6 @@
     "revolving_utilization",
     "num_credit_lines",
     "num_real_estate_loans",
-    "num_dependents",
     "log_monthly_income",
     "log_debt_ratio",
     "total_late_occurrences",
@@ -42,37 +41,37 @@
     "Baseline": {
       "AUC-ROC": 0.8545,
       "PR-AUC": 0.3686,
-      "F1 (classe 1)": 0.2298,
-      "Recall (cl. 1)": 0.1412,
-      "Precision (cl. 1)": 0.6162
+      "F1 (classe 1)": 0.2302,
+      "Recall (cl. 1)": 0.1415,
+      "Precision (cl. 1)": 0.6156
     },
     "Class Weight": {
-      "AUC-ROC": 0.8556,
-      "PR-AUC": 0.3694,
-      "F1 (classe 1)": 0.3296,
-      "Recall (cl. 1)": 0.748,
-      "Precision (cl. 1)": 0.2114
+      "AUC-ROC": 0.8555,
+      "PR-AUC": 0.3693,
+      "F1 (classe 1)": 0.3299,
+      "Recall (cl. 1)": 0.7482,
+      "Precision (cl. 1)": 0.2116
     },
     "SMOTE": {
       "AUC-ROC": 0.8554,
-      "PR-AUC": 0.3691,
-      "F1 (classe 1)": 0.3297,
-      "Recall (cl. 1)": 0.7483,
-      "Precision (cl. 1)": 0.2114
+      "PR-AUC": 0.3692,
+      "F1 (classe 1)": 0.33,
+      "Recall (cl. 1)": 0.7495,
+      "Precision (cl. 1)": 0.2116
     },
     "Undersampling": {
       "AUC-ROC": 0.8552,
-      "PR-AUC": 0.369,
+      "PR-AUC": 0.3691,
       "F1 (classe 1)": 0.3293,
-      "Recall (cl. 1)": 0.7472,
+      "Recall (cl. 1)": 0.7475,
       "Precision (cl. 1)": 0.2112
     },
     "SMOTETomek": {
       "AUC-ROC": 0.8554,
-      "PR-AUC": 0.3691,
-      "F1 (classe 1)": 0.3297,
-      "Recall (cl. 1)": 0.7478,
-      "Precision (cl. 1)": 0.2115
+      "PR-AUC": 0.3692,
+      "F1 (classe 1)": 0.3301,
+      "Recall (cl. 1)": 0.7492,
+      "Precision (cl. 1)": 0.2117
     }
   }
 }
